@@ -1,0 +1,360 @@
+/*
+Theme Name: Hembradorlab Portfolio
+Theme URI: http://hembradorlab.com
+Description: Portfolio site for displaying interactive, static and videobased creative work. All on an oh-so-pretty one page document utilizing Jquery and AJAX for aforementioned oh-so-prettiness.
+Author: Randy. Hembrador
+Author URI: http://hembradorlab.com
+Template: notes-blog
+Version: .1
+Built off the Notes Blog theme (http://notesblog.com/) - both this and the Notes Blog theme must be in your wp-content/themes/ folder for this theme to work.
+*/
+
+@import url("../notes-blog/style.css");
+html {
+	height:100%;
+}
+body.home{
+	width:100%;
+	height:100%;
+	background-color:#ccc;
+}
+#site{
+	width:100%;
+	height:100%;
+}
+#siteHeader{
+	position:absolute;
+	height:40%;
+	width:100%;
+	z-index:100;
+}
+#title{
+	position:relative;
+	top:45%;
+}
+#siteHeader h1,
+#siteHeader h5{
+	position:relative;
+	text-align:center;
+	width:100%;
+}
+#siteHeader h1{
+	font-size:40pt;
+}
+
+
+/*menu*/
+div#top-navigation{
+	background:#888;
+	bottom:0;
+	height:34px;
+	position:absolute;
+}
+.menu-hembradorlab-menu-container{
+	height:34px;
+	text-align:center;
+	bottom:0;
+	position:absolute;
+	width:100%;
+}
+.sticky {
+	position:fixed;
+	margin:0 auto;
+	top:0;
+	width:100%;
+	padding:28px 0 0;
+}
+div.port-nav, .sticky{
+	background:#bbb;
+}
+#secondary_menu{
+	float:right;
+	right:0;
+	position:fixed;
+	z-index:200;
+}
+#secondary_menu li{
+	display:inline-block;
+	vertical-align:top;
+}
+#searchField{
+	background:#bbb;
+	display:none;
+	float:right;
+	padding:.5em;
+}
+
+
+
+
+
+/*-----------PROJECT SECTIONS--------------*/
+.proj-icon{
+	background-repeat:no-repeat;
+	display:inline-block;
+	overflow:hidden;
+	vertical-align:top;
+}
+.reveal{
+	background:rgba(0,0,0,.6);
+	color:#fff;
+	display:block;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12pt;
+	font-variant:small-caps;
+	font-weight:800;
+	height:100%;
+	opacity:0;
+	text-align:center;
+	text-decoration:none;
+	width:100%;
+}
+.reveal:hover{
+	opacity:1;
+}
+.port-section {
+	position:relative;
+	width:100%;
+}
+.section-content{
+	margin: 0 auto;
+	padding:80px 0;
+	width:1200px;
+	height:100%;
+}
+#home-frontpage{
+	background:blue;
+}
+.home-featured-item{
+	width:550px;
+	height:200px;
+	background:#333;
+	margin:40px 0 0;
+}
+.home-featured h2{
+	color:#fff;
+}
+#home-latest-work{
+	float:left;
+}
+#home-latest-news{
+	float:right;
+}
+
+
+/*-----------CONTENT--------------*/
+#home-frontpage > div > div{
+	height:100%
+}
+#latestLinks{
+	position:absolute;
+	width:1200px;
+	top: 45%;
+}
+
+
+/*-----------INTERACTIVE--------------*/
+
+
+#port-home {
+	padding:200px 0 0;
+}
+#port-interactive {
+	background:#a00;
+}
+#int-icons li.proj-icon{
+	width:310px;
+}
+#int-icons li.proj-icon > ul{
+	height:150px;
+	overflow:hidden;
+}
+#int-icons ul.reveal > li > a{
+	background:rgba(0,0,0,.6);
+	color:#fff;
+	display:inline-block;
+	float:left;
+	height:100%;
+	opacity:.3;
+	padding:100px 0 30px;
+	text-align:center;
+	text-decoration:none;
+	width:50%;
+}
+#int-icons ul.reveal > li > a:hover{
+	opacity:1;
+}
+
+/*-----------STATIC--------------*/
+
+#port-static{
+	background:aqua;
+}
+#sta-icons li.proj-icon{
+	background:#aaa;
+	height:175px;
+	margin: 0 2em 0 0;
+	width:150px;
+}
+#sta-icons a > div{
+	margin:0 auto;
+	padding:30px 0 0;
+	width:80%;
+}
+
+
+
+/*-----------VIDEO--------------*/
+
+#port-video{
+	min-height:1200px;
+	background:lime;
+}
+#video-container{
+	background:#888;
+	height:650px;
+	margin:0 auto;
+	overflow:hidden;
+	width:960px;
+}
+ul#vid-icons{
+	width:90%;
+	margin:0 auto;
+}
+ul#vid-icons > li{
+	background:#aaa;
+	display:inline-block;
+	height:150px;
+	overflow:hidden;
+	position:relative;
+	width:350px;
+}
+ul#vid-icons > li a{
+	padding: 60px 0 0;
+	position:absolute;
+}
+div.now-playing{
+	color:#fff;
+	height:100%;
+	left:0;
+	opacity:0;
+	padding:4em 0 0;
+	pointer-events: none;
+	position:absolute;
+	text-transform:uppercase;
+	top:0;
+	text-align:center;
+	width:100%;
+	z-index:30;
+}
+li.current div.now-playing{
+	background:rgba(100,100,100,.85);
+	opacity:1;
+	pointer-events:auto;	
+}
+
+
+/*----------NEWS-----------*/
+#port-news {
+	background:purple;
+}
+#port-news h1,
+#port-news h5{
+	text-align:center;
+}
+#port-news h5{
+	margin:0 auto 3%;
+}
+ul#news-icons {
+	text-align:center;
+}
+ul#news-icons > li{
+	background:#555;
+	display:inline-block;
+	height: 350px;
+	list-style:none;
+	margin:0 2em 0 0;	
+}
+ul#news-icons li > a{
+	display:block
+	height:100%;
+	text-decoration:none;
+	width:100%;
+}
+#news-icons a > div{
+	height: 100%;
+	width: 300px;
+}
+
+
+
+/*----------RATS-----------*/
+
+
+#port-rats {
+	background:#fff;
+}
+
+/*----------------------------------------------------------------*/
+/*Individual POST Pages*/
+#content,#proj-content{
+	width:100%;
+	height:100%;
+}
+#proj-content{
+	background:red;
+}
+#content > div{
+	height:100%;
+}
+.content-half{
+	width:50%;
+	height:100%;
+	min-width:400px;
+	min-height:400px;
+	margin:0;
+	padding:0;
+	float:left;
+}
+#left-content{
+	background:aqua;
+}
+#left-content img{
+	max-width:100%;
+}
+#content h1{
+	margin:0 0 1em;
+	padding:0;
+}
+nav a{
+	padding:10px 30px;
+	background:#aaa;
+	margin:20px 0px;
+}
+#right-content{
+	background:lime;
+}
+
+
+
+/*----------------NOTES BLOG POST SUPPLEMENTS AND OVERRIDES---------------------*/
+div#outer-wrap {
+	width: 100%;
+	height:100%;
+}
+div#inner-wrap{
+	position:relative;
+	width:100%;
+	height:100%;
+}
+div.hentry {
+	margin:0;
+}
+div#post-thumbnail{
+	padding-bottom:20px;
+}
+div#top-navigation div ul,
+div#top-navigation div ul li {
+	float:none;
+	display:inline-block;
+}

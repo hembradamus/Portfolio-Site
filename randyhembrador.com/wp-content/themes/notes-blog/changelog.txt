@@ -1,0 +1,149 @@
+0.2.9 | PUBLIC BETA RELEASE
+
+* Version update in style.css
+
+* Legacy support for Notes Blog Core Theme style pullquotes
+
+* 0.2.9.1 release: Minor typo in comments.php (fixed)
+
+
+0.2.8 | SOON TO BE PUBLIC
+
+* Version update in style.css
+
+* Comment javascript inclusion in header.php
+
+* License details added to style.css
+
+* Pingback styles added to style.css
+
+* Content width set in functions.php
+
+* Theme requires WordPress 3.1 (might work in 3.0, won't test)
+
+* Switched to home_url() from bloginfo('url')
+
+* Added support for Aside, Quote and Gallery post formats in functions.php
+
+* Added styling for Aside (others will wait)
+
+* Support for Aside in loop.php
+
+* Removed loop-home.php
+
+* Updated loop.php
+
+* New screenshot.png
+
+* Tightened sidebar.php conditionals
+
+* Cleaned up comments.php
+
+* Created pagetemplate-archives.php
+
+
+0.2.7 | MINOR MINOR
+
+* Version update in style.css
+
+* Hooks added above/below title in all loops
+
+* Moved postmeta to function, added to hook below title (functions.php)
+
+
+0.2.6 | JUST A FEW MORE THINGS
+
+* Version update in style.css
+
+* Some text downsized 2 px (style.css)
+
+* Added hooks to header.php, loop-single.php and footer.php, declared in functions.php
+
+
+0.2.5 | HERE WE GO
+
+* Version update in style.css
+
+* Minor fixes to Disqus plugin support 
+
+* the_date replaced with the_time in all loop templates
+
+* Swedish localization added
+
+
+0.2.4 | TUNING
+
+* Version update in style.css
+
+* Better sidebar inclusion in header.php
+
+* Widget area removed from footer.php, now includes sidebar-footer.php
+
+* Added sidebar-footer.php
+
+* Widget area removed from home.php, now includes sidebar-home.php
+
+* Added sidebar-home.php
+
+* Changed widget area calls in sidebar.php
+
+* Fixed stupid body bug that no one noticed...! (header.php)
+
+* Fixed div.hentry bug (thanks Sennbrink)
+
+
+0.2.3 | TIMESTAMPS
+
+* Version update in style.css
+
+* Added timestamps in alla loop-XXXXX.php files
+
+
+0.2.2 | CLOSING IN ON BETA H4CK3RY
+
+* Version update in style.css
+
+* Added Disqus support (style.css)
+
+* Added global right column sidebar (functions.php, sidebar.php)
+
+* Removed default content in widget areas in sidebar.php
+
+* header.php widget area gets ul
+
+* CSS added for header widget area (style.css)
+
+
+0.2.1 | MORE WORDCAMP HACKERY
+
+* Removed obsolete /em in footer.php since @windyjonas couldn't stand it being there
+
+* attachment.php added
+
+* Edits in style.css
+
+!!! Changelog files might not be complete, date check required!
+
+
+0.2 | WORDCAMP STOCKHOLM 2010 WORK BEGINS
+
+* Version update
+
+* Minor translation edits in loop-single.php, loop.php
+
+* Simple .sticky support in style.css
+
+* Added comments.php
+
+* Added comments code to functions.php
+
+* Added home.php and loop-home.php, added widget areas to functions.php
+
+* Conditional sidebars in sidebar.php, corresponding widget areas
+
+* Cleanup in style.css, style for blockquote, ul, ol
+
+
+0.1 | INITIAL VERSION
+
+* Created based on Notes Blog Core Theme 1.0.3

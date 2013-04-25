@@ -1,0 +1,54 @@
+TODO
+
+_2 * Custom header
+
+_2 * .bypostauthor style (icon?)
+
+_2 * Updated widget feature with fallback area when dedicated area is empty
+
+_3 * License setting for the footer (theme options)
+
+_3 * Minor comment thread bug (margin/padding top in replies in depth X)
+
+_3 * Date separating in listings
+
+_3 * Subscribe to comments plugin supports
+
+_3 * Pingback icon
+
+_3 * Create editor-style.css
+
+_3 * Edit Elements & Design in style.css
+
+_3 * Stylesheet cleanup
+
+_3 * Settings for what postmeta to show (theme options)
+
+_3 * Author bio box after post in single.php
+
+_3 * Locate Gravatar issue (if there is one?)
+
+_3 * Add visual support for Quote post format
+
+_3 * Add visual support for Gallery post format
+
+_3 * Add visual support for Video post format
+
+_3 * Update sv_SE language file
+
+
+POSSIBLE ADDITIONS?
+
+__ * Custom javascript/other head code (theme options)
+
+__ * Widget front page Page template
+
+__ * pagetemplate-links.php
+
+__ * pagetemplate-front.php
+
+__ * Options page for hook inserts (theme options)
+
+__ * Color settings in backend
+
+__ * notesblog.com Dashboard widget (optional)

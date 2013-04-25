@@ -1,0 +1,305 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: notesblog\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-11-25 19:05+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Thord Daniel Hedengren <tdh+translations@tdh.me>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: -1,-1,52,-1,-1,-1,-1,-1,-1,-1\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: archive.php:7
+#, php-format
+msgid "Daily archives: <span>%s</span>"
+msgstr "Arkiv för dagen <span>%s</span>"
+
+#: archive.php:9
+#, php-format
+msgid "Monthly archives: <span>%s</span>"
+msgstr "Arkiv f&ouml;r m&aring;naden <span>%s</span>"
+
+#: archive.php:11
+#, php-format
+msgid "Yearly archives: <span>%s</span>"
+msgstr "Arkiv f&ouml;r &aring;ret <span>%s</span>"
+
+#: archive.php:13
+#, php-format
+msgid "Archive for %s"
+msgstr "Arkiv f&ouml;r <span>%s</span>"
+
+#: archive.php:15
+#, php-format
+msgid "Tag archives for %s"
+msgstr "Taggarkiv f&ouml;r %s"
+
+#: archive.php:17
+msgid "Archive"
+msgstr "Arkiv"
+
+#: comments.php:9
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Den h&auml;r posten &auml;r l&ouml;senordsskyddad. Fyll i l&ouml;senordet f&ouml;r att l&auml;sa kommentarerna."
+
+#: comments.php:32
+msgid "<span class=\"meta-nav\">&larr;</span> Older comments"
+msgstr "<span class=\"meta-nav\">&larr;</span> &Auml;ldre kommentarer"
+
+#: comments.php:33
+msgid "Newer comments <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Nyare kommentarer <span class=\"meta-nav\">&rarr;</span>"
+
+#: comments.php:51
+msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
+msgstr "<span class=\"meta-nav\">&larr;</span> &Auml;ldre kommentarer"
+
+#: comments.php:52
+msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Nyare kommentarer <span class=\"meta-nav\">&rarr;</span>"
+
+#: comments.php:63
+msgid "Sorry, comments are closed."
+msgstr "Kommentarsfunktionen &auml;r dessv&auml;rre st&auml;ngd."
+
+#: footer.php:13
+msgid "Built on"
+msgstr "Byggd p&aring;"
+
+#: footer.php:13
+msgid "by"
+msgstr "av"
+
+#: footer.php:13
+msgid "Powered by"
+msgstr "Kraftsatt av"
+
+#: footer.php:17
+msgid "That's it - back to the top of page!"
+msgstr "Det var allt, tillbaka till sidans topp!"
+
+#: functions.php:25
+msgid "Top Navigation"
+msgstr "Toppnavigering"
+
+#: functions.php:31
+msgid "Beside the logo"
+msgstr "Bredvid logotypen"
+
+#: functions.php:33
+msgid "Widget area in the header, right of the logo."
+msgstr "Widgetomr&aring;de i sidhuvudet, till h&ouml;ger om logotypen."
+
+#: functions.php:41
+msgid "Global right column"
+msgstr "Global h&ouml;gerkolumn"
+
+#: functions.php:43
+msgid "The global right column sits on top of every right column, leave empty if unwanted."
+msgstr "Den globala h&ouml;gerkolumnen &auml;r &ouml;verst i alla h&ouml;gerkolumner, l&auml;mna tom om du inte vill anv&auml;nda den."
+
+#: functions.php:51
+msgid "Front page right column"
+msgstr "F&ouml;rstasidans h&ouml;gerkolumn"
+
+#: functions.php:53
+msgid "Right column widget area used on the front page."
+msgstr "Widgetomr&aring;de f&ouml;r h&ouml;gerkolumnen p&aring; f&ouml;rstasidan."
+
+#: functions.php:61
+msgid "Posts right column"
+msgstr "Posters h&ouml;gerkolumn"
+
+#: functions.php:63
+msgid "Right column widget area for single posts."
+msgstr "Widgetomr&aring;de f&ouml;r h&ouml;gerkolumnen p&aring; postsidor."
+
+#: functions.php:71
+msgid "Pages right column"
+msgstr "H&ouml;gerkolumn f&ouml;r sidor"
+
+#: functions.php:73
+msgid "Right column widget area for Pages."
+msgstr "Widgetomr&aring;de f&ouml;r h&ouml;gerkolumnen p&aring; sidor."
+
+#: functions.php:81
+msgid "Archives right column"
+msgstr "Arkivsidors h&ouml;gerkolumn"
+
+#: functions.php:83
+msgid "Right column widget area for archive listings."
+msgstr "Widgetomr&aring;de f&ouml;r h&ouml;gerkolumnen p&aring; arkivsidor."
+
+#: functions.php:91
+msgid "Right column fallback"
+msgstr "H&ouml;gerkolumn f&ouml;r allt annat"
+
+#: functions.php:93
+msgid "Right column fallback widget area for the rest."
+msgstr "Widgetomr&aring;de f&ouml;r h&ouml;gerkolumnen p&aring; sidor som inte t&auml;cks av n&aring;got annat widgetomr&aring;de."
+
+#: functions.php:101
+msgid "Home column A"
+msgstr "F&ouml;rstasidans kolumn A"
+
+#: functions.php:103
+msgid "The left column just below the menu on the front page."
+msgstr "Den v&auml;nstra kolumen under menyn p&aring; f&ouml;rstasidan."
+
+#: functions.php:111
+msgid "Home column B"
+msgstr "F&ouml;rstasidans kolumn B"
+
+#: functions.php:113
+msgid "The middle column just below the menu on the front page."
+msgstr "Mittenkolumen under menyn p&aring; f&ouml;rstasidan."
+
+#: functions.php:121
+msgid "Home column C"
+msgstr "F&ouml;rstasidans kolumn C"
+
+#: functions.php:123
+msgid "The right column just below the menu on the front page."
+msgstr "Den h&ouml;gra kolumen under menyn p&aring; f&ouml;rstasidan."
+
+#: functions.php:131
+msgid "Footer column A"
+msgstr "Sidfotens kolumn A"
+
+#: functions.php:133
+msgid "The far left column in the footer."
+msgstr "Den v&auml;nstra kolumen i sidfoten."
+
+#: functions.php:141
+msgid "Footer column B"
+msgstr "Sidfotens kolumn B"
+
+#: functions.php:143
+msgid "The left middle column in the footer."
+msgstr "Mittenkolumen i sidfoten."
+
+#: functions.php:151
+msgid "Footer column C"
+msgstr "Sidfotens kolumn C"
+
+#: functions.php:153
+msgid "The right middle column in the footer."
+msgstr "Den f&ouml;rsta h&ouml;gra kolumen i sidfoten."
+
+#: functions.php:161
+msgid "Footer column D"
+msgstr "Sidfotens kolumn D"
+
+#: functions.php:163
+msgid "The far right column in the footer."
+msgstr "Den andra h&ouml;gra kolumen i sidfoten."
+
+#: functions.php:187
+#, php-format
+msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">says:</span>"
+msgstr "<cite class=\"fn\">%s</cite> <span class=\"says\">s&auml;ger</span>"
+
+#: functions.php:190
+msgid "Your comment is awaiting moderation."
+msgstr "Din kommentar ligger i modereringsk&ouml;n."
+
+#: functions.php:194
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s klockan %2$s"
+
+#: functions.php:194
+msgid "(Edit)"
+msgstr "(&Auml;ndra)"
+
+#: loop-attachment.php:9
+msgid "Back to"
+msgstr "Tillbaka till"
+
+#: loop-attachment.php:13
+#: loop-home.php:28
+#: loop-page.php:10
+#: loop-single.php:26
+#: loop.php:55
+msgid "Edit"
+msgstr "&Auml;ndra"
+
+#: loop-home.php:12
+#: loop-single.php:10
+#: loop.php:39
+msgid "Written by"
+msgstr "Skriven av"
+
+#: loop-home.php:13
+#: loop-single.php:11
+#: loop.php:40
+msgid "F j, Y @ g:i a"
+msgstr "j F, Y @ H:i"
+
+#: loop-home.php:14
+#: loop-single.php:12
+#: loop.php:41
+msgid "Filed under"
+msgstr "Sparad i"
+
+#: loop-home.php:18
+#: loop-single.php:16
+#: loop.php:45
+msgid "and tagged "
+msgstr "och taggad "
+
+#: loop-home.php:25
+#: loop-single.php:23
+#: loop.php:52
+msgid "Leave a comment"
+msgstr "Skriv en kommentar"
+
+#: loop-home.php:25
+#: loop-single.php:23
+#: loop.php:52
+msgid "1 comment"
+msgstr "1 kommentar"
+
+#: loop-home.php:25
+#: loop-single.php:23
+#: loop.php:52
+#, php-format
+msgid "% comments"
+msgstr "% kommentarer"
+
+#: loop-home.php:32
+#: loop-page.php:13
+#: loop-single.php:30
+#: loop.php:69
+msgid "Pages:"
+msgstr "Sidor:"
+
+#: loop-home.php:47
+#: loop.php:6
+#: loop.php:85
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> &Auml;ldre poster"
+
+#: loop-home.php:50
+#: loop.php:9
+#: loop.php:88
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Nyare poster <span class=\"meta-nav\">&rarr;</span>"
+
+#: loop.php:19
+msgid "Not Found"
+msgstr "Hittades inte"
+
+#: loop.php:22
+msgid "Sorry, there is nothing here. You might want to try and search for whatever it was you were looking for?"
+msgstr "Tyv&auml;rr, det finns ingenting h&auml;r. F&ouml;rs&ouml;k g&auml;rna hitta vad du letade efter genom att s&ouml;ka p&aring; sidan."
+
+#: searchform.php:3
+msgid "Search"
+msgstr "S&ouml;k"
+
