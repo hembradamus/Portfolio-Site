@@ -6,7 +6,7 @@
 <?php get_header(); query_posts('page_id=125');?>
 <div id="content">
 	<div>
-		<div style="width:1080px; margin:4rem auto;">
+		<div style="width:967px; margin:4rem auto;">
 	  <?php while (have_posts()) : the_post();
 			the_content();
 		endwhile; ?>

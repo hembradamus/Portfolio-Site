@@ -43,7 +43,7 @@ $j(function fancyFeast() {
 		$j.fancybox({
 			'padding'		: 40,
 			'autoSize'		: false,
-			'width'			: 1100,
+			'width'			: 1000,
 			'height'		: '85%',
 			'scrolling'		: 'yes',
 			'titleShow'		: false,

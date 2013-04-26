@@ -37,6 +37,7 @@ $sX:50px;
 $sY:50px;
 
 /*COLOR*/
+$black:#000000;
 $blue:#81c0ea;
 $dkBlue:#1c69c4;
 $red:#e57070;
@@ -47,6 +48,7 @@ $purple:#897FCC;
 $dkPurple:#4a43a8;
 $lightGray:#dfdfde;
 $medGray:#c0bfbf;
+$dkGray:#6D6E71;
 
 /*Mixins*/
 @mixin fullframe {
@@ -1219,42 +1221,68 @@ div.comment-body p{
 /*----------RESUME-----------*/
 
 #resumeBody{
+	color:$dkGray;
 	float:left;
-	font-size:1rem;
+	font-size:.85rem;
+	max-width:100%;
 	padding:2px 33px 20px 60px;
-	width:960px;
+	width:777px;
+	h3{
+		color:$black;
+		font-family:futura;
+		font-size:.75rem;
+		font-style:normal;
+		margin:0;
+		padding:.5rem 0;
+		text-transform:uppercase;
+	}
 }
 body.page #resumeBody{
 	background:#ffffff;
-	font-size:1rem;
 	padding:40px 80px;
-	#resHeader h1{
-		color:$dkPurple;
+	#resHeader h1, div.resYear h2{
+		color:#1A9EE8;
+		font-family:VAGRoundedBT-Regular,vag2,san-serif;
 	}
 }
 
 #resHeader{
-	height:5rem;
 	margin:2.5% 0 2.5% 0;
-	border-bottom:1pt solid #ccc;
+	position:relative;
+	vertical-align:bottom;
+	> div{
+		border-bottom:4pt solid #ccc;
+		display:inline-block;
+		height:5rem;
+		margin:0 0 1rem;
+		position:relative;
+		vertical-align:bottom;
+	}
+	h2{
+		color:$medGray;
+		float:left;
+		font-family:futura;
+		font-size:.85rem;
+		font-weight:700;
+		padding:0 0 .5rem;
+	}
 }
-#resHeader > div{
-	display:inline-block;
-}
-#resContact{
-	color:$medGray;
-	/*font-family:futura;*/
-	font-size:.75rem;
-	font-weight:700;
+#resHeadLeft, #resLeft{
+	float:left;
+	max-width:100%;
+	width:570px;
 }
 #resHeadRight{
+	width:185px;
 	float:right;
 }
 #resHeadRight a{
 	background-image:url('inc/graphics/icons.png');
 	display:inline-block;
 	height:50px;
-	margin:.5rem 0 0 1rem;
+	margin:.5rem 0 0 .5rem;
+	padding:0 0 .85rem;
+	position:relative;
 	text-align:right;
 	width:50px;
 }
@@ -1266,36 +1294,44 @@ body.page #resumeBody{
 #resPrint:hover{background-position:($sX*2) ($sY*6);}
 
 #resLeft{
-	float:left;
-	margin:0 5% 0 0;
+	margin:0;
 	padding:0;
-	width:65%;
-	h3{
-		color:$medGray;
-		font-size:1rem;
-		margin:1rem 0;
-		text-transform:uppercase;
-	}
 }
+$resYearWidth:12.5%;
 div.resJob{
 	float:left;
 	line-height:1.25rem;
-	padding:0 0 1rem;
+	margin:.5rem 0 0;
+	padding:0 0 .75rem;
 	h2{
 		color:#000;
 	}
-	.resJobname{
-		width:70%;
+	> div{
+		display:inline-block;
 	}
-	.resDate{
-		float:right;
+	.resYear{
+		float:left;
+		font-size:1.2rem;
+		font-weight:700;
+		width:$resYearWidth;
+	}
+	.resJobDeets{
+		float:left;
+		width:100% - $resYearWidth;
+	}
+	.resJobname{
+		color:$dkBlue;
+		font-family:VAGRoundedBT-Regular,vag2,san-serif;
+		font-size:1.2rem;
+		margin:0 0 .5rem;
+		width:100%;
 	}
 	.resJobname, p, ul, a.resProjURL{
 		float:left;
 	}
 	ul{
-		list-style-type:disc;
-		margin:.75rem 0 0 2.25rem;
+		list-style-type:square;
+		margin:0 0 0 1rem;
 	}
 	li{
 		margin:0 0 .5rem 0;
@@ -1307,24 +1343,29 @@ div.resJob{
 	}
 }
 #resRight{
-	font-style:italic;
+	background-color:#F1F2F2;
 	float:right;
 	margin:0;
-	padding:2rem 2.5rem;
-	width:17%;
-	h3{
-		color:#ffffff;
-		font-style:normal;
-		margin:0;
-		padding:1rem 0 .5rem;
-		text-transform:uppercase;
-	}
+	padding:5px 20px;
+	width:145px;
 	p{
 		color:#808285;
 		font-size:.85rem !important;
-		line-height:1.25rem !important;
+		line-height:1.1rem !important;
 		margin:0 0 1rem;
+		span{
+			font-style:italic;
+		}
 	}
+}
+#resFooter{
+	border-bottom:1px solid $lightGray;
+	border-top:3px solid $lightGray;
+	float:left;
+	margin:2rem 0;
+	padding:.65rem 0;
+	text-align:center;
+	width:100%;
 }
 /*------------Contact-----------*/
 .wpcf7-form{
