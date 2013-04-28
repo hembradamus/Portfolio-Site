@@ -5,7 +5,7 @@ $j(function setHeight() {
 	$j('.port-section').css('minHeight',siteHeight);
 	$j(window).resize(function() {
 		var newHeight = $j(window).height();
-		$j('.port-section').animate('height',newHeight);
+		$j('.port-section').animate('Height',newHeight);
 	});
 });
 /*$j(document).ready(function() {
@@ -43,7 +43,7 @@ $j(function fancyFeast() {
 		$j.fancybox({
 			'padding'		: 40,
 			'autoSize'		: false,
-			'width'			: 1000,
+			'width'			: 940,
 			'height'		: '85%',
 			'scrolling'		: 'yes',
 			'titleShow'		: false,
@@ -385,12 +385,41 @@ $j(function prepFancyElements() {
 
 //int-proj icon "More Info" hover
 $j(function(){
-	$j('#int-icons li.proj-icon div.reveal>a>div').add('#int-icons div.reveal>ul>li>a#intIconInfo').hover(function(){
-		$j('#int-icons div.reveal>ul>li>a#intIconInfo').css({'opacity':'1'});
+	$j('li.proj-icon.interactive #iconURL').hover(function(){
+		$j('.reveal>ul>li>a#iconInfo').css({'opacity':'.3'});
 	},
 	function(){
-		$j('#int-icons div.reveal>ul>li>a#intIconInfo').css({'opacity':'.3'});
+		$j('.reveal>ul>li>a#iconInfo').css({'opacity':'1'});
 	});
+	
+	/*
+	$j('.reveal>a>div').css({paddingTop : 0, opacity : 0 });
+	$j('.reveal>ul').css({bottom : 0, opacity : 0 });
+	title = $j('.reveal>a>div');
+	icon = $j('.reveal>ul');
+	
+	
+	$j('li.proj-icon').hover(function(){
+		title.animate({
+			paddingTop: '45px',
+			opacity: 1
+		}, {duration: 200, queue: false});
+		icon.animate({
+			bottom: '40px',
+			opacity: 1
+		}, {duration: 200, queue: false});
+	},
+	function(){
+		title.animate({
+			paddingTop: 0,
+			opacity: 0
+		}, {duration: 200, queue: false});
+		icon.animate({
+			bottom: 0,
+			opacity: 0
+		}, {duration: 200, queue: false});
+	});
+	*/
 });
 
 //search toggle
@@ -586,22 +615,40 @@ $j(function(){
 			$j('#homeHeader #secondary_menu li').removeClass('hoverNav');
 		}
 	});
-
-	$j('#port-interactive').waypoint(function(direction){
-		if(direction === 'down'){
+	
+	blue = '#81c0ea',
+	dkBlue ='#1c69c4',
+	red = '#e57070',
+	dkRed = '#cc4c3b',
+	green = '#76c469',
+	dkGreen = '#76c469',
+	purple = '#897FCC',
+	dkPurple = '#4a43a8'
+	
+	function sectionColor(sColor, sDkColor, pLeft) {
 			$j('#smallTitle').animate({
-				backgroundColor: $j.Color('#81b7e2')
+				backgroundColor: $j.Color(sColor)
 			}, {duration: 200, queue: false});
-			$j('h1').animate({
-				color: $j.Color('#81b7e2')
+			$j('.reveal>ul>li a').animate({
+				backgroundColor: $j.Color(sDkColor)
 			}, {duration: 200, queue: false});
-			$j('#top-navigation').animate({
-				borderBottomColor: $j.Color('#81b7e2')
+			$j('h1').add('.resYear h2').animate({
+				color: $j.Color(sColor)
+			}, {duration: 200, queue: false});
+			$j('#top-navigation').add('#menuPointer').animate({
+				borderBottomColor: $j.Color(sColor)
 			}, {duration: 200, queue: false});
 			$j('#menuPointer').animate({
-				'border-bottom-color':'#81b7e2',
-				'left':'4.25rem'
+				'left':pLeft
 			},{duration: 200, queue: false});
+			$j('div#copy #innerFooter').animate({
+				borderTopColor: $j.Color(sColor)
+			}, {duration: 200, queue: false});
+	}
+	
+	$j('#port-interactive').waypoint(function(direction){
+		if(direction === 'down'){
+			sectionColor(blue, dkBlue, '3.75rem');
 			$j('.result').css({'border-left-color': '#1c69c4'});
 			$j('.searchTerm').css({'color': '#1c69c4'});
 		}
@@ -612,94 +659,22 @@ $j(function(){
 			},{duration: 200, queue: false});
 		}
 	},{ offset:40, continuous:false });
-
+	
 	$j('#port-interactive h1').waypoint(function(direction){
 		if(direction === 'up'){
-			$j('#smallTitle').animate({
-				backgroundColor: $j.Color('#81b7e2')
-			}, {duration: 200, queue: false});
-			$j('h1').animate({
-				color: $j.Color('#81b7e2')
-			}, {duration: 200, queue: false});
-			$j('#top-navigation').animate({
-				borderBottomColor: $j.Color('#81b7e2')
-			}, {duration: 200, queue: false});
-			$j('#menuPointer').animate({
-				'border-bottom-color':'#81b7e2',
-				'left':'4.25rem'
-			},{duration: 200, queue: false});
+			sectionColor(blue, dkBlue, '3.75rem');
 		}
 	},{ offset:0, continuous:false });
 
 	$j('#port-static').waypoint(function(direction){
 		if(direction === 'down'){
-			$j('#smallTitle').animate({
-				backgroundColor: $j.Color('#e57070')
-			}, {duration: 200, queue: false});
-			$j('h1').animate({
-				color: $j.Color('#e57070')
-			}, {duration: 200, queue: false});
-			$j('#top-navigation').animate({
-				borderBottomColor: $j.Color('#e57070')
-			}, {duration: 200, queue: false});
-			$j('#menuPointer').animate({
-				'border-bottom-color':'#e57070',
-				'left':'12.75rem'
-			},{duration: 200, queue: false});
-		}
-	},{ offset:40, continuous:false });
-
-	$j('#port-static h1').waypoint(function(direction){
-		if(direction === 'up'){
-			$j('#smallTitle').animate({
-				backgroundColor: $j.Color('#e57070')
-			}, {duration: 200, queue: false});
-			$j('h1').animate({
-				color: $j.Color('#e57070')
-			}, {duration: 200, queue: false});
-			$j('#top-navigation').animate({
-				borderBottomColor: $j.Color('#e57070')
-			}, {duration: 200, queue: false});
-			$j('#menuPointer').animate({
-				'border-bottom-color':'#e57070',
-				'left':'12.75rem'
-			},{duration: 200, queue: false});
+			sectionColor(red, dkRed, '12.5rem');
 		}
 	},{ offset:0, continuous:false });
 
-	$j('#port-video').waypoint(function(direction){
-		if(direction === 'down'){
-			$j('#smallTitle').animate({
-				backgroundColor: $j.Color('#76c469')
-			}, {duration: 200, queue: false});
-			$j('h1').animate({
-				color: $j.Color('#76c469')
-			}, {duration: 200, queue: false});
-			$j('#top-navigation').animate({
-				borderBottomColor: $j.Color('#76c469')
-			}, {duration: 200, queue: false});
-			$j('#menuPointer').animate({
-				'border-bottom-color':'#76c469',
-				'left':'19.75rem'
-			},{duration: 200, queue: false});
-		}
-	},{ offset:40, continuous:false});
-
-	$j('#vid-player').waypoint(function(direction){
+	$j('#port-static h1').waypoint(function(direction){
 		if(direction === 'up'){
-			$j('#smallTitle').animate({
-				backgroundColor: $j.Color('#76c469')
-			}, {duration: 200, queue: false});
-			$j('h1').animate({
-				color: $j.Color('#76c469')
-			}, {duration: 200, queue: false});
-			$j('#top-navigation').animate({
-				borderBottomColor: $j.Color('#76c469')
-			}, {duration: 200, queue: false});
-			$j('#menuPointer').animate({
-				'border-bottom-color':'#76c469',
-				'left':'19.75rem'
-			},{duration: 200, queue: false});
+			sectionColor(red, dkRed, '12.5rem');
 		}
-	},{ offset:0, continuous:false});
+	},{ offset:0, continuous:false });
 });

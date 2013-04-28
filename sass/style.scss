@@ -218,7 +218,7 @@ input.wpcf7-submit{
 }
 #secondary_menu{
 	float:right;
-	margin:5px 5px 0 0;
+	margin:.25% .25% 0 0;
 	padding:0;
 	position:fixed;
 	right:0px;
@@ -291,7 +291,6 @@ input.wpcf7-submit{
 /*-----------GLOBALS--------------*/
 #homeHeader{
 	background:$blue;
-	box-shadow:0px 0px 50px #000000;
 	height:70%;
 	left:0;
 	position:absolute;
@@ -356,7 +355,7 @@ input.wpcf7-submit{
 	height:1rem;
 	pointer-events:none;
 	position:relative;
-	width:30rem;
+	width:375px;
 }
 #menuPointer{
 	/*background-color:rgba(50,200,50,.5);*/
@@ -378,14 +377,14 @@ input.wpcf7-submit{
 	width:100%;
 }
 .section-content{
-	float:left;
+	font-size:1rem;
 	height:100%;
 	margin: 0 auto;
-	padding:10.5% 0;
+	padding:9% 0 15%;
+	width:88%;
 	h1{
 		font-size:2.15rem;
-		margin:0 0 .75rem;
-		text-transform:uppercase;
+		margin:0 0 .25rem;
 	}
 }
 .left-content{
@@ -396,16 +395,8 @@ input.wpcf7-submit{
 	@include contentHalf;
 	float:right;
 }
-.section-content div.left-content{
-	background:#ffffff;
-	font-family:droid;
-	font-size:1rem;
-	line-height:200%;
-	height:100%;
-	margin:0 3% $sideMargin $sideMargin;
-	min-width:275px;
-	padding:2.25rem 2rem 3.25rem;
-	width:25%;
+.section-content div.top-content{
+	margin:0 0 1.5rem;
 }
 .section-content div.right-content{
 	float:left;
@@ -420,9 +411,12 @@ input.wpcf7-submit{
 .proj-icon{
 	background-repeat:no-repeat;
 	background-size:cover;
+	background-position:center center;
 	box-shadow:10px 10px 0px #30302f;
 	display:inline-block;
 	float:left;
+	height:200px;
+	margin:10px 20px 10px 0;
 	overflow:hidden;
 	position:relative;
 	vertical-align:top;
@@ -435,26 +429,103 @@ input.wpcf7-submit{
 	font-size:1.25rem;
 	height:100%;
 	opacity:0;
+	overflow:hidden;
+	position:relative;
 	text-align:left;
 	text-transform:uppercase;
+	> ul{
+		bottom:40px;
+		left:50%;
+		position:absolute;
+		> li{
+			float:left;
+			width:110px;
+			> a{
+				background-image:url('inc/graphics/icons.png');
+				border-radius:10px;
+				color:#fff;
+				display:inline-block;
+				font-size:1rem;
+				float:left;
+				opacity:1;
+				padding:.5rem 0;
+				padding-left:35px;
+				text-align:left;
+				width:100%;
+		}
+			a#iconInfo{background-position: 410px 456px;}
+			a#iconURL{background-position: 210px 452px;float:right;}
+			a#iconView{background-position: 410px 456px;}
+			a#iconPlay{background-position: 410px 456px;}
+		}
+	}
+	> a > div{
+		height:100%;
+		width:85%;
+		color:#ffffff;
+		padding:45px 35px 0 35px;
+	}
 	&:hover{
 		opacity:1;
 	}
-	span{
-		display:block;
-		margin:10% 0 0 7%;
+}
+
+
+
+/*-----------INTERACTIVE--------------*/
+li.proj-icon.interactive,
+li.proj-icon.video{
+	width:380px;
+}
+li.proj-icon.interactive{
+	div.reveal > ul{
+		margin:0 0 0 -155px;
+		width:310px;
+	}
+	#iconView,#iconPlay{display:none;}
+	#iconURL{
+		opacity:.3;
+		&:hover{
+			opacity:1;
+		}
 	}
 }
 
+/*-----------STATIC--------------*/
+li.proj-icon.static{
+	background:#aaa;
+	width:195px;
+	&:hover{
+		box-shadow:10px 10px 0px #e57070;
+	}
+	.reveal > a > div{
+		padding-left:20px;
+		padding-right:20px;
+	}
+	#iconInfo,#iconURL,#iconPlay{display:none;}
+}
+li.proj-icon.static, li.proj-icon.video{
+	div.reveal > ul{
+		margin:0 0 0 -75px;
+		width:150px;
+	}
+}
+/*-----------VIDEO--------------*/
+
+li.proj-icon.video{
+	#iconInfo,#iconURL,#iconView{display:none;}
+}
+
+/*-----------SECTIONS--------------*/
 
 /*-----------FRONTPAGE--------------*/
 
 #latestLinks{
 	bottom:10%;
-	margin:0 auto;
+	left:50%;
+	margin:0 0 0 -360px;
 	position:absolute;
 	text-align:center;
-	width:100%;
 }
 .home-featured-item{
 	background:#333;
@@ -474,94 +545,12 @@ input.wpcf7-submit{
 }
 #home-latest-news{
 }
-
-/*-----------INTERACTIVE--------------*/
-
-#port-home {
-	padding:200px 0 0;
+#port-interactive li.proj-icon:hover{
+	box-shadow:10px 10px 0px $blue;
 }
-#port-interactive {
+#port-static li.proj-icon:hover{
+	box-shadow:10px 10px 0px $red;
 }
-#int-icons li.proj-icon{
-	background-position:center center;
-	height:39%;
-	margin:0 5% 5% 0;
-	min-height:175px;
-	min-width:365px;
-	width:43%;
-	div.reveal{
-		overflow:hidden;
-		position:relative;
-	}
-	div.reveal > a > div{
-		height:100%;
-		width:85%;
-		color:#ffffff;
-		padding:10% 10% 0 5%;
-	}
-	div.reveal > ul{
-		border-top:1pt solid #ffffff;
-		bottom:0;
-		position:absolute;
-		width:100%;
-	}
-	&:hover{
-		box-shadow:10px 10px 0px $blue;
-	}
-}
-#int-icons div.reveal > ul > li{
-	float:left;
-	width:49.5%;
-}
-#int-icons div.reveal > ul > li > a{
-	background-color:rgba(0,0,0,.6);
-	color:#fff;
-	display:inline-block;
-	font-size:1rem;
-	float:left;
-	opacity:.3;
-	padding-bottom:1rem;
-	padding-left:30%;
-	padding-top:1rem;
-	text-align:left;
-	width:70%;
-	&:hover{
-		opacity:1;
-	}
-}
-#intIconInfo,#intIconURL{
-	background-image:url('inc/graphics/icons.png');
-}
-#intIconInfo{
-	background-position: 420px 464px;
-}
-#intIconURL{
-	background-position: 220px 460px;
-}
-/*-----------STATIC--------------*/
-
-#port-static{
-}
-#sta-icons li.proj-icon{
-	background:#aaa;
-	background-size:cover;
-	height:40%;
-	margin:0 5% 5% 0;
-	min-height:175px;
-	min-width:150px;
-	width:18.5%;
-	&:hover{
-		box-shadow:10px 10px 0px #e57070;
-	}
-}
-#sta-icons a > div.reveal{
-	margin:0 auto;
-	span{
-		margin:0;
-		padding:27% 10% 0 12%;
-	}
-}
-/*-----------VIDEO--------------*/
 
 #port-video .section-content{
 	float:none;
@@ -732,7 +721,7 @@ li.current div.now-playing{
 		/*background-color:rgba(50,200,50,.5);*/
 		border-bottom-width:15px;
 		border-bottom-color:$purple;
-		left:25.5rem;
+		left:20.25rem;
 	}
 }
 
@@ -1240,9 +1229,8 @@ div.comment-body p{
 body.page #resumeBody{
 	background:#ffffff;
 	padding:40px 80px;
-	#resHeader h1, div.resYear h2{
+	#resHeader h1, .resYear h2{
 		color:#1A9EE8;
-		font-family:VAGRoundedBT-Regular,vag2,san-serif;
 	}
 }
 
@@ -1276,15 +1264,22 @@ body.page #resumeBody{
 	width:185px;
 	float:right;
 }
-#resHeadRight a{
-	background-image:url('inc/graphics/icons.png');
-	display:inline-block;
-	height:50px;
-	margin:.5rem 0 0 .5rem;
-	padding:0 0 .85rem;
+#resHeadRight li{
+	display:inline;
+	float:left;
 	position:relative;
-	text-align:right;
-	width:50px;
+	a{
+		background-image:url('inc/graphics/icons.png');
+		display:inline-block;
+		height:50px;
+		margin:.5rem 0 0 .5rem;
+		padding:0 0 .85rem;
+		text-align:right;
+		width:50px;
+	}
+	.tooltip{
+		top:0;
+	}
 }
 #resLI{background-position:($sX*6) ($sY*8);}
 #resLI:hover{background-position:($sX*6) ($sY*6);}
@@ -1314,6 +1309,9 @@ div.resJob{
 		font-size:1.2rem;
 		font-weight:700;
 		width:$resYearWidth;
+		h2{
+			font-family:VAGRoundedBT-Regular,vag2,san-serif;
+		}
 	}
 	.resJobDeets{
 		float:left;

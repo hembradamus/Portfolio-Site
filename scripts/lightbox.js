@@ -1,5 +1,5 @@
 (function($) {
-            $j('.int-proj').fancybox({
+            $j('li.proj-icon.interactive a').fancybox({
             arrows          : true,
             autoSize        : false,
 			closeBtn   		: true,
@@ -56,7 +56,7 @@
 								}
 			});
 			
-            $('.sta-proj').fancybox({
+            $('li.proj-icon.static a').fancybox({
             arrows          : true,
             autoSize        : false,
 			closeBtn   		: true,
@@ -68,12 +68,22 @@
                               } ,
 			helpers			: {
 									title:  null
-                              },
-            beforeLoad		: function(){
-									$j('html, body').animate({
-										scrollTop: $j('#port-static').offset().top
-									});
-								}
+                              }
+			});
+			
+            $('li.proj-icon.video a').fancybox({
+            arrows          : true,
+            autoSize        : false,
+			closeBtn   		: true,
+			width			: 1020,
+			'ajax'          : {
+									dataFilter: function(data) {
+									return $(data).find('#content')[0];
+									}
+                              } ,
+			helpers			: {
+									title:  null
+                              }
 			});
 
 
