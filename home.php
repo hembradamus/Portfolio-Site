@@ -55,12 +55,12 @@
 				'meta_query' => array(
 					array(
 						'key' => 'hl_client',
-						'value' => 'TEDx Embarcadero',
+						'value' => 'personal',
 						'compare' => 'NOT LIKE'
 					),
 					array(
 						'key' => 'hl_client',
-						'value' => 'simon',
+						'value' => 'student',
 						'compare' => 'NOT LIKE'
 					)
 				)
@@ -129,12 +129,12 @@
 					'relation' => 'OR',
 					array(
 						'key' => 'hl_client',
-						'value' => 'Electronic',
+						'value' => 'personal',
 						'compare' => 'LIKE'
 					),
 					array(
 						'key' => 'hl_client',
-						'value' => 'TEDx',
+						'value' => 'student',
 						'compare' => 'LIKE'
 					)
 				)
