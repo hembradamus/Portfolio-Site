@@ -453,10 +453,10 @@ input.wpcf7-submit{
 				text-align:left;
 				width:100%;
 		}
-			a#iconInfo{background-position: 410px 456px;}
-			a#iconURL{background-position: 210px 452px;float:right;}
-			a#iconView{background-position: 410px 456px;}
-			a#iconPlay{background-position: 410px 456px;}
+			a#iconInfo{background-position: $sX*6 $sY*9;}
+			a#iconURL{background-position: $sX*3 $sY*9;float:right;}
+			a#iconView{background-position: $sX*12 $sY*9;}
+			a#iconPlay{background-position: $sX*9 $sY*9;}
 		}
 	}
 	> a > div{

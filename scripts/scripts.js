@@ -394,9 +394,9 @@ $j(function(){
 	
 	/*
 	$j('.reveal>a>div').css({paddingTop : 0, opacity : 0 });
-	$j('.reveal>ul').css({bottom : 0, opacity : 0 });
+	$j('.iconIcons').css({bottom : 0, opacity : 0 });
 	title = $j('.reveal>a>div');
-	icon = $j('.reveal>ul');
+	icon = $j('.iconIcons');
 	
 	
 	$j('li.proj-icon').hover(function(){
@@ -408,6 +408,7 @@ $j(function(){
 			bottom: '40px',
 			opacity: 1
 		}, {duration: 200, queue: false});
+		console.log(icon);
 	},
 	function(){
 		title.animate({
@@ -418,8 +419,7 @@ $j(function(){
 			bottom: 0,
 			opacity: 0
 		}, {duration: 200, queue: false});
-	});
-	*/
+	});*/
 });
 
 //search toggle

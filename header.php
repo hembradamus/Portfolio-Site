@@ -52,6 +52,7 @@
 	<?php if (is_home() || is_front_page()) {?>
 	<header id="homeHeader" class="homeHeader">
 		<div id="waypointTrigger" style="height:10px;position:absolute;top:80%;width:100%;"></div>
+		<div id="topIconTrigger" style="background:transparent;height:10px;position:fixed;top:90%;width:100%;"></div>
 		<nav id="secondary_menu">
 			<ul>
 				<li id="about">

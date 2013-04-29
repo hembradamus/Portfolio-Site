@@ -78,7 +78,7 @@
 				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="proj-link fancybox.ajax" rel="commissioned-works" >
 					<div><span><?php the_title_attribute();?></span></div>
 				</a>
-				<ul>
+				<ul class="iconIcons">
 					<li>  
 						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="proj-link fancybox.ajax" id="iconInfo" rel="commissionedWorks" >
 							MORE INFO
