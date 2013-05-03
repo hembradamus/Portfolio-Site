@@ -138,7 +138,6 @@
 
 .fancybox-nav span {
 	background-color:#c0bfbf;
-	border-radius:90px;
 	position: absolute;
 	top: 27%; /*randy default 50%*/
 	width: 90px;/*randy default 36px*/
@@ -150,15 +149,13 @@
 }
 
 .fancybox-prev span {
-	left: 10px;
 	background-position: 665px 215px; /*randy default 0 -36px*/
-	box-shadow:2px 5px 20px #555555;
+	left:0;
 }
 
 .fancybox-next span {
-	right: 10px;
 	background-position: 675px 115px; /*randy default 0 -72px*/
-	box-shadow:-2px 5px 20px #555555;
+	right:0;
 }
 
 .fancybox-nav:hover span {

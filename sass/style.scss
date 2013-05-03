@@ -373,6 +373,7 @@ input.wpcf7-submit{
 .port-section {
 	border-bottom:$simpleborder;
 	float:left;
+	padding-bottom:5%;
 	position:relative;
 	width:100%;
 }
@@ -411,7 +412,6 @@ input.wpcf7-submit{
 .proj-icon{
 	background-repeat:no-repeat;
 	background-size:cover;
-	background-position:center center;
 	box-shadow:10px 10px 0px #30302f;
 	display:inline-block;
 	float:left;
@@ -493,8 +493,7 @@ li.proj-icon.interactive{
 
 /*-----------STATIC--------------*/
 li.proj-icon.static{
-	background:#aaa;
-	width:195px;
+	width:180px;
 	&:hover{
 		box-shadow:10px 10px 0px #e57070;
 	}
@@ -519,7 +518,9 @@ li.proj-icon.video{
 /*-----------SECTIONS--------------*/
 
 /*-----------FRONTPAGE--------------*/
-
+#home-frontpage{
+	padding-bottom:0 !important;
+}
 #latestLinks{
 	bottom:10%;
 	left:50%;

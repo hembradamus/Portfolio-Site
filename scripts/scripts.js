@@ -25,7 +25,7 @@ $j(function fancyFeast() {
 		$j.fancybox({
 			'padding'		: 40,
 			'autoSize'		: false,
-			'width'			: 1100,
+			'width'			: 940,
 			'height'		: '85%',
 			'titleShow'		: false,
 			'href'			: '#aboutPage',
@@ -664,17 +664,17 @@ $j(function(){
 		if(direction === 'up'){
 			sectionColor(blue, dkBlue, '3.75rem');
 		}
-	},{ offset:0, continuous:false });
+	},{ offset:40, continuous:false });
 
 	$j('#port-static').waypoint(function(direction){
 		if(direction === 'down'){
 			sectionColor(red, dkRed, '12.5rem');
 		}
-	},{ offset:0, continuous:false });
+	},{ offset:40, continuous:false });
 
 	$j('#port-static h1').waypoint(function(direction){
 		if(direction === 'up'){
 			sectionColor(red, dkRed, '12.5rem');
 		}
-	},{ offset:0, continuous:false });
+	},{ offset:40, continuous:false });
 });

@@ -62,6 +62,11 @@
 						'key' => 'hl_client',
 						'value' => 'student',
 						'compare' => 'NOT LIKE'
+					),
+					array(
+						'key' => 'hl_client',
+						'value' => 'Me',
+						'compare' => 'NOT LIKE'
 					)
 				)
 			);
@@ -90,12 +95,12 @@
 						</a>
 					</li>
 					<li> 
-						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="proj-link fancybox.ajax" id="iconView" rel="commissionedWorks" >
+						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="proj-link fancybox.ajax" id="iconView" rel="commissioned_works" >
 							VIEW WORK
 						</a>
 					</li>
 					<li>
-						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="proj-link fancybox.ajax" id="iconPlay" rel="commissionedWorks" >
+						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="proj-link fancybox.ajax" id="iconPlay" rel="commissioned_Wrks" >
 							PLAY VIDEO
 						</a>
 					</li>
@@ -136,6 +141,11 @@
 						'key' => 'hl_client',
 						'value' => 'student',
 						'compare' => 'LIKE'
+					),
+					array(
+						'key' => 'hl_client',
+						'value' => 'Me',
+						'compare' => 'LIKE'
 					)
 				)
 			);
@@ -151,12 +161,12 @@
 		?>
 		<li id="project-<?php the_ID(); ?>" class="proj-icon <?php echo get_post_type() ?>" style="background-image:url('<?php echo $thumbail; ?>');">
 			<div class="reveal">
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="proj-link fancybox.ajax" rel="commissioned-works" >
+				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="proj-link fancybox.ajax" rel="personal-works" >
 					<div><span><?php the_title_attribute();?></span></div>
 				</a>
 				<ul>
 					<li>  
-						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="proj-link fancybox.ajax" id="iconInfo" rel="commissionedWorks" >
+						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="proj-link fancybox.ajax" id="iconInfo" rel="personalWorks" >
 							MORE INFO
 						</a>
 					</li>
@@ -166,12 +176,12 @@
 						</a>
 					</li>
 					<li> 
-						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="proj-link fancybox.ajax" id="iconView" rel="commissionedWorks" >
+						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="proj-link fancybox.ajax" id="iconView" rel="personal_works" >
 							VIEW WORK
 						</a>
 					</li>
 					<li>
-						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="proj-link fancybox.ajax" id="iconPlay" rel="commissionedWorks" >
+						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="proj-link fancybox.ajax" id="iconPlay" rel="personal_Wrks" >
 							PLAY VIDEO
 						</a>
 					</li>
