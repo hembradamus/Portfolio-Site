@@ -69,12 +69,11 @@
 				</li>
 			</ul>
 		</nav>
+		<div id="title">
+			<h1><?php bloginfo('name'); ?></h1>
+			<h2>Interaction Designer</h2>
+		</div>
 		<nav id="top-navigation" class="port-nav">
-			<div id="title">
-				<img src="<?php bloginfo('url'); ?>/wp-content/themes/hembradorlab/inc/graphics/logo.png"/><br/>
-				<h1><?php bloginfo('name'); ?></h1>
-				<h2>Portfolio for Randy Hembrador and a better tomorrow!</h2>
-			</div>
 			<a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>">
 				<div id="smallTitle">
 					<h1>H!</h1>				
@@ -82,6 +81,44 @@
 			</a>
 			<?php wp_nav_menu('container=false'); ?>
 		</nav>
+		<div id="latestLinks">
+			<!--begin loop / latest works-->
+			<?php
+				$latest_args = array (
+					'post_type' => array( 'interactive','static','video' ),
+					'showposts' => '1'
+				);
+				
+				$home_query = new WP_Query( $latest_args );
+				while ($home_query->have_posts()) : $home_query ->the_post();
+				$homebg = get_post_meta($post->ID, 'hl_latestbg', $single = true);
+			?>
+			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="latest">
+				<div id="home-latest-work" class="home-featured-item" style="background-image:url('<?php echo $homebg; ?>');">
+				  <h2>LATEST WORK</h2>
+					<?php the_title_attribute(); ?>
+				</div>
+			</a>
+			<?php endwhile;?>            
+			<!-- begin latest news-->
+			<?php
+				rewind_posts();
+				query_posts('showposts=1');
+				while (have_posts()) : the_post();
+				$homebg = get_post_meta($post->ID, 'hl_latestbg', $single = true);
+			?>
+			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="">
+				<div id="home-latest-news" class="home-featured-item" style="background-image:url('<?php echo $homebg; ?>');">
+					<h2>LATEST NEWS</h2>
+					<?php the_title_attribute(); ?>
+				</div>
+			</a>
+			<?php endwhile;?>
+		</div>       
+		<div id="homeFooter">
+			<img src="<?php bloginfo('url'); ?>/wp-content/themes/hembradorlab/inc/graphics/logo.png"/><br/>
+			Copyright MMXIII Randy S. Hembrador.
+		</div>
 	</header>
 
 	<?php } else {?>

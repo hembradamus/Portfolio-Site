@@ -8,7 +8,7 @@
 	<div class="feedContainer">
 		<div class="twoThirds">
 			<div class="secTitle">
-				<h1>Hembrablogfoliblog</h1>
+				<h1>Randy's Blog</h1>
 				<h2>Thoughts so deep, they're abysmal</h2>
 			</div>
 			<?php

@@ -4,44 +4,10 @@
 
 	<div id="home-frontpage" class="port-section">
 	  <div class="section-content">
-		<div id="latestLinks">
-			<!--begin loop / latest works-->
-			<?php
-				$latest_args = array (
-					'post_type' => array( 'interactive','static','video' ),
-					'showposts' => '1'
-				);
-				
-				$home_query = new WP_Query( $latest_args );
-				while ($home_query->have_posts()) : $home_query ->the_post();
-				$homebg = get_post_meta($post->ID, 'hl_latestbg', $single = true);
-			?>
-			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="latest">
-				<div id="home-latest-work" class="home-featured-item" style="background-image:url('<?php echo $homebg; ?>');">
-				  <h2>LATEST WORK</h2>
-					<?php the_title_attribute(); ?>
-				</div>
-			</a>
-			<?php endwhile;?>            
-			<!-- begin latest news-->
-			<?php
-				rewind_posts();
-				query_posts('showposts=1');
-				while (have_posts()) : the_post();
-				$homebg = get_post_meta($post->ID, 'hl_latestbg', $single = true);
-			?>
-			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="">
-				<div id="home-latest-news" class="home-featured-item" style="background-image:url('<?php echo $homebg; ?>');">
-					<h2>LATEST NEWS</h2>
-					<?php the_title_attribute(); ?>
-				</div>
-			</a>
-			<?php endwhile;?>
-		</div>          
 	  </div>
 	</div>
       
-	<div id="port-interactive" class="port-section">
+	<div id="port-commissions" class="port-section">
 	  <div class="section-content">
 	  <div class="top-content">
 	  	<h1>Commissioned Works</h1>
@@ -119,7 +85,7 @@
 	  </div>
 	</div><!--end int-project-->
         
-	<div id="port-static" class="port-section">
+	<div id="port-personal" class="port-section">
 	  <div class="section-content">
 	  <div class="top-content">
 	  	<h1>Personal Projects</h1>
@@ -199,7 +165,7 @@
 	  </div>
 	  </div><!--end section-content-->
 	</div>
-<!-----------end port-static----------->
+<!-----------end port-personal----------->
 	
 </div>
 <?php get_footer(); ?>

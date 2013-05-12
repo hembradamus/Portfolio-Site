@@ -99,16 +99,16 @@ $j(function menuScroll() {
 				scrollTop: $j('#port-video').offset().top
 			});
 		}
-		else if(navTarget.indexOf("static") > 0) {
+		else if(navTarget.indexOf("personal") > 0) {
 		e.preventDefault();
 			$j('html, body').animate({
-				scrollTop: $j('#port-static').offset().top
+				scrollTop: $j('#port-personal').offset().top
 			});
 		}
-		else if(navTarget.indexOf("interactive") > 0) {
+		else if(navTarget.indexOf("commissions") > 0) {
 		e.preventDefault();
 			$j('html, body').animate({
-				scrollTop: $j('#port-interactive').offset().top
+				scrollTop: $j('#port-commissions').offset().top
 			});
 		}
 	});
@@ -151,7 +151,7 @@ $j(function() {
 									title:  null
                               },
 			afterShow		: 	function() {
-									/*window.history.pushState('object or string','Interactive Project', this['href']);*/
+									/*window.history.pushState('object or string','commissions Project', this['href']);*/
 									$j('.fancybox-next').css({'right':'-60px'});
 									$j('.fancybox-prev').css({'left':'-60px'});
 									$j('#descContainter div#overview').show();
@@ -201,7 +201,7 @@ $j(function() {
                               },
             beforeLoad		: function(){
 									$j('html, body').animate({
-										scrollTop: $j('#port-static').offset().top
+										scrollTop: $j('#port-personal').offset().top
 									});
 								}
 			});
@@ -218,15 +218,15 @@ $j(function() {
 				scrollTop: $j("#port-video").offset().top
 			}, 750);
 		}
-		else if(targetURL.indexOf("static") > 0) {
+		else if(targetURL.indexOf("personal") > 0) {
 			$j('html, body').animate({
-				scrollTop: $j("#port-static").offset().top
+				scrollTop: $j("#port-personal").offset().top
 			}, 500);
 			setTimeout(latestFancy, 500);
 		}
-		else if(targetURL.indexOf("interactive") > 0) {
+		else if(targetURL.indexOf("commissions") > 0) {
 			$j('html, body').animate({
-				scrollTop: $j("#port-interactive").offset().top
+				scrollTop: $j("#port-commissions").offset().top
 			}, 250);
 			setTimeout(intFancy, 250);
 		}
@@ -603,8 +603,8 @@ $j(function(){
 				'borderBottomWidth':'6px'
 			},200);
 			$j('#homeHeader #top-navigation li a').animate({
-				'fontSize':'.9rem',
-				'padding':'.3rem 2.5rem .5rem'
+				'fontSize':'1rem',
+				'padding':'.4rem 2rem'
 			},200);
 			$j('#homeHeader #top-navigation').removeClass('stuck');
 			$j('#menuPointer').animate({
@@ -646,9 +646,9 @@ $j(function(){
 			}, {duration: 200, queue: false});
 	}
 	
-	$j('#port-interactive').waypoint(function(direction){
+	$j('#port-commissions').waypoint(function(direction){
 		if(direction === 'down'){
-			sectionColor(blue, dkBlue, '3.75rem');
+			sectionColor(blue, dkBlue, '2.25rem');
 			$j('.result').css({'border-left-color': '#1c69c4'});
 			$j('.searchTerm').css({'color': '#1c69c4'});
 		}
@@ -660,19 +660,19 @@ $j(function(){
 		}
 	},{ offset:40, continuous:false });
 	
-	$j('#port-interactive h1').waypoint(function(direction){
+	$j('#port-commissions h1').waypoint(function(direction){
 		if(direction === 'up'){
-			sectionColor(blue, dkBlue, '3.75rem');
+			sectionColor(blue, dkBlue, '2.25rem');
 		}
 	},{ offset:40, continuous:false });
 
-	$j('#port-static').waypoint(function(direction){
+	$j('#port-personal').waypoint(function(direction){
 		if(direction === 'down'){
 			sectionColor(red, dkRed, '12.5rem');
 		}
 	},{ offset:40, continuous:false });
 
-	$j('#port-static h1').waypoint(function(direction){
+	$j('#port-personal h1').waypoint(function(direction){
 		if(direction === 'up'){
 			sectionColor(red, dkRed, '12.5rem');
 		}

@@ -1,7 +1,7 @@
 /*
 theme Name: Hembradorlab Portfolio
 theme URI: http://randyhembrador.com
-Description: Portfolio site for displaying interactive, static and videobased creative work. All on an oh-so-pretty one page document utilizing Jquery and AJAX for aforrementioned oh-so-prettiness.
+Description: Portfolio site for displaying commissions, personal and videobased creative work. All on an oh-so-pretty one page document utilizing Jquery and AJAX for aforrementioned oh-so-prettiness.
 Author: Randy. Hembrador
 Author URI: http://randyhembrador.com
 Template: notes-blog
@@ -29,7 +29,6 @@ url('webfonts/263E50_0_0.ttf') format('truetype');}
 /*===== SASS =====*/
 /*LAYOUT*/
 $bigHeaderTop:17%;
-$menBottom:3rem;
 $testDivBG:rgba(50,50,50,.5);
 $sideMargin:6%;
 $simpleborder:1pt solid #777;
@@ -86,7 +85,7 @@ div.fancybox-inner h1{
 h2{
 	color:$medGray;
 	/*font-family:futura !important;*/
-	font-size:1.25rem;
+	font-size:1.4rem;
 	a:hover{
 		color:#707070;
 	}
@@ -192,7 +191,6 @@ input.wpcf7-submit{
 	text-align:center;
 	width:100%;
 	ul{
-		height:100%;
 		position:relative;
 	}
 	li{
@@ -200,18 +198,22 @@ input.wpcf7-submit{
 		display:inline-block;
 		/*font-family:futura;*/
 		height:100%;
+		margin:0 15px 15px 0;
 			&:hover{
 				background:#ffffff;
 				color:#333;
 			}
 		a{
-			color:#d0d0d0;
+			color:#ffffff;
 			display:block;
-			font-weight:bold;
+			font-size:1rem;
 			letter-spacing:.1rem;
-			padding:.3rem 2.5rem .5rem;
+			padding:.4rem 2.25rem;
 			&:hover{
 				color:#333;
+			}
+			span{
+				font-weight:700;
 			}
 		}
 	}
@@ -291,37 +293,38 @@ input.wpcf7-submit{
 /*-----------GLOBALS--------------*/
 #homeHeader{
 	background:$blue;
-	height:70%;
+	height:100%;
 	left:0;
 	position:absolute;
 	top:0;
 	width:100%;
 	z-index:10;
 	#title{
-		bottom:3.25rem;
-		margin:0;
-		position:absolute;
+		margin:12% 0 5px;
+		position:relative;
 		text-align:center;
 		width:100%;
 		h1,h3{text-align:center;}
 		h1{
 			color:#ffffff !important;
 			font-family:GeometraRoundedBold, vag2, sans-serif;
-			font-size:3.75rem;
-			height:4.75rem;
-			letter-spacing:-.1rem;
-			margin:1rem 0 0;
+			font-size:7rem;
+			line-height:100%;
+			margin:0 0 2.25%;
 			padding:0;
 		}
 		h2{
 			color:#000000;
-			font-size:1.3rem;
+			font-size:2rem;
+			font-weight:100;
+			letter-spacing:1.25rem;
+			margin:0 0 2.75%;
+			text-transform:uppercase;
 		}
 	}
 	#top-navigation{
-		bottom:$menBottom;
-		position:absolute;
 		font-size:.9rem;
+		position:relative;
 		li{
 		}
 	}
@@ -330,14 +333,12 @@ input.wpcf7-submit{
 	}
 }
 .stuck{
-	position:fixed;
-	top:0;
-}
-
-.stuck{
 	background:$testDivBG;
 	position:fixed !important;
 	top:0;
+}
+#homeHeader #top-navigation.stuck li{
+	margin-bottom:0;
 }
 #pointerOuterContainer{
 	/*background-color:rgba(50,200,50,.5);*/
@@ -355,7 +356,7 @@ input.wpcf7-submit{
 	height:1rem;
 	pointer-events:none;
 	position:relative;
-	width:375px;
+	width:450px;
 }
 #menuPointer{
 	/*background-color:rgba(50,200,50,.5);*/
@@ -472,7 +473,7 @@ input.wpcf7-submit{
 
 
 
-/*-----------INTERACTIVE--------------*/
+/*-----------interactive--------------*/
 li.proj-icon.interactive,
 li.proj-icon.video{
 	width:380px;
@@ -491,7 +492,7 @@ li.proj-icon.interactive{
 	}
 }
 
-/*-----------STATIC--------------*/
+/*-----------static--------------*/
 li.proj-icon.static{
 	width:180px;
 	&:hover{
@@ -522,9 +523,9 @@ li.proj-icon.video{
 	padding-bottom:0 !important;
 }
 #latestLinks{
-	bottom:10%;
+	display:none;
 	left:50%;
-	margin:0 0 0 -360px;
+	margin:3px 0 0 -320px;
 	position:absolute;
 	text-align:center;
 }
@@ -542,14 +543,27 @@ li.proj-icon.video{
 	}
 }
 #home-latest-work{
-	margin:0 40px 0 0;
+	margin:0 5px 0 0;
 }
 #home-latest-news{
 }
-#port-interactive li.proj-icon:hover{
+#homeFooter{
+	bottom:30px;
+	font-size:1rem;
+	position:absolute;
+	text-align:center;
+	text-transform:uppercase;
+	width:99.25%;
+	img{
+		height:auto;
+		margin:0 0 1.5%;
+		width:175px;
+	}
+}
+#port-commissions li.proj-icon:hover{
 	box-shadow:10px 10px 0px $blue;
 }
-#port-static li.proj-icon:hover{
+#port-personal li.proj-icon:hover{
 	box-shadow:10px 10px 0px $red;
 }
 
@@ -706,9 +720,12 @@ li.current div.now-playing{
 		top:0;
 		height:3.7rem;
 		position:fixed;
-		li a{
-			font-size:.8rem;
-			padding:1.25rem 1.75rem;
+		li{
+			margin-bottom:0;
+			a{
+				font-size:.8rem;
+				padding:1.25rem 1.75rem;
+			}
 		}
 	}
 	#secondary_menu li{
@@ -722,7 +739,7 @@ li.current div.now-playing{
 		/*background-color:rgba(50,200,50,.5);*/
 		border-bottom-width:15px;
 		border-bottom-color:$purple;
-		left:20.25rem;
+		left:23rem;
 	}
 }
 
@@ -1369,20 +1386,13 @@ div.resJob{
 /*------------Contact-----------*/
 .wpcf7-form{
 	margin:.5rem 0 0;
-	textarea{
-		color:$medGray;
-		font-family:droid, sans-serif;
+	input, textarea{
 		font-size:1.25rem;
 		font-style:normal;
 		margin:.5rem 0 0;
 		&:focus{
 			color:#444;
 		}
-	}
-	input{
-		font-size:1rem;
-		font-style:normal;
-		margin:.5rem 0 0;
 	}
 }
 div.wpcf7-response-output{
@@ -1422,18 +1432,19 @@ div#copy{
 	margin:5rem 0 0;
 	#innerFooter{
 		background:#000000;
-		border-top:6px solid $dkGreen;
+		border-top:6px solid $dkPurple;
 		color:$lightGray;
 		margin:0;
-		padding:2rem 0 2.5rem;
-		text-align:center;
+		padding:2rem 6% 2.5rem;
+		text-align:left;
 	}
 	h5{
 		font-family:VAGRoundedBT-Regular, vag2, san-serif;
 		font-variant:normal;
 		font-size:2rem;
 		font-weight:100;
-		margin:0 0 .5rem;
+		margin:0;
+		padding:0;
 		text-transform:capitalize;
 	}
 	h2{
@@ -1441,7 +1452,7 @@ div#copy{
 		margin:0 0 .5rem;
 	}
 	p{
-		margin:0 auto;
+		margin:0;
 		max-width:100%;
 		width:700px;
 		a{
