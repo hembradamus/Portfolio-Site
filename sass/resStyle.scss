@@ -1,0 +1,193 @@
+/*LAYOUT*/
+$bigHeaderTop:17%;
+$testDivBG:rgba(50,50,50,.5);
+$sideMargin:6%;
+$simpleborder:1pt solid #777;
+$sX:50px;
+$sY:50px;
+
+/*COLOR*/
+$black:#000000;
+$blue:#81c0ea;
+$dkBlue:#1c69c4;
+$red:#e57070;
+$dkRed:#cc4c3b;
+$green:#76c469;
+$dkGreen:#76c469;
+$purple:#897FCC;
+$dkPurple:#4a43a8;
+$lightGray:#dfdfde;
+$medGray:#c0bfbf;
+$dkGray:#6D6E71;
+
+/*Mixins*/
+@mixin fullframe {
+	width:100%;
+}
+@mixin contentHalf{
+	display:inline-block;
+	margin:0;
+	padding:0;
+	vertical-align:top;
+}
+body{
+	font-family:helvetica, arial, sans-serif;
+	font-size:10px;
+	width:6.5in;
+	padding:0 .25in;
+}
+p{
+	margin:0 0 5px;
+}
+ul{
+	padding:0;
+	margin:0;
+}
+h3{
+	font-size:.65rem;
+	margin:10px 0;
+	text-transform:uppercase;
+}
+#resHeader{
+	margin:2.5% 0 2.5% 0;
+	position:relative;
+	vertical-align:bottom;
+	h1{
+		color:$blue;
+		font-family:arial rounded mt bold, sans-serif;
+		font-size:18pt;
+		font-weight:700;
+		margin-bottom:5px;
+	}
+	> div{
+		border-bottom:4pt solid #ccc;
+		display:inline-block;
+		height:4.5rem;
+		margin:0 0 .5rem;
+		position:relative;
+		vertical-align:bottom;
+	}
+	h2{
+		color:$medGray;
+		float:left;
+		font-family:futura;
+		font-size:.75rem;
+		font-weight:700;
+		margin:0;
+		padding:0 0 5px;
+	}
+}
+#resHeadLeft, #resLeft{
+	float:left;
+	max-width:68%;
+	width:570px;
+}
+#resHeadRight{
+	width:185px;
+	max-width:30%;
+	float:right;
+}
+#resHeadRight li{
+	display:inline;
+	float:left;
+	position:relative;
+	a{
+		background-image:url('inc/graphics/icons.png');
+		display:none;
+		height:50px;
+		margin:.5rem 0 0 .5rem;
+		padding:0 0 .85rem;
+		text-align:right;
+		width:50px;
+	}
+	.toolText, .tooltip{
+		display:none;
+		top:0;
+	}
+}
+#resLI{background-position:($sX*6) ($sY*8);}
+#resLI:hover{background-position:($sX*6) ($sY*6);}
+#resPDF{background-position:($sX*4) ($sY*8);}
+#resPDF:hover{background-position:($sX*4) ($sY*6);}
+#resPrint{background-position:($sX*2) ($sY*8);}
+#resPrint:hover{background-position:($sX*2) ($sY*6);}
+
+#resLeft{
+	margin:0;
+	padding:0;
+}
+$resYearWidth:12.5%;
+div.resJob{
+	float:left;
+	line-height:125%;
+	margin:.5rem 0 0;
+	padding:0 0 .75rem;
+	h2{
+		color:#000;
+	}
+	> div{
+		display:inline-block;
+	}
+	.resYear{
+		float:left;
+		width:$resYearWidth;
+		h2{
+			color:$blue;
+			font-family:VAGRoundedBT-Regular,vag2,arial rounded mt bold,sans-serif;
+			font-size:11pt;
+			font-weight:700;
+			margin:0;
+			padding:0;
+		}
+	}
+	.resJobDeets{
+		float:left;
+		width:100% - $resYearWidth;
+	}
+	.resJobname{
+		color:$dkBlue;
+		font-family:VAGRoundedBT-Regular,vag2,arial rounded mt bold,sans-serif;
+		font-size:11pt;
+		margin:0 0 .5rem;
+		width:100%;
+	}
+	.resJobname, p, ul, a.resProjURL{
+		float:left;
+	}
+	ul{
+		list-style-type:square;
+		margin:0 0 0 1rem;
+	}
+	li{
+		margin:0 0 .5rem 0;
+	}
+	a.resProjURL{
+		color:$dkBlue;
+		font-weight:500;
+		margin:0 0 .5rem;
+	}
+}
+#resRight{
+	background-color:#F1F2F2;
+	float:right;
+	margin:0;
+	padding:5px 20px;
+	width:145px;
+	p{
+		color:#808285;
+		line-height:150%;
+		margin:0 0 1rem;
+		span{
+			font-style:italic;
+		}
+	}
+}
+#resFooter{
+	border-bottom:1px solid $lightGray;
+	border-top:3px solid $lightGray;
+	float:left;
+	margin:2rem 0 0;
+	padding:.65rem 0;
+	text-align:center;
+	width:100%;
+}

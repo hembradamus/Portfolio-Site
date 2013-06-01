@@ -58,7 +58,7 @@ $j(function fancyFeast() {
 					self.focus();
 					win.document.open();
 					win.document.write('<'+'html'+'><'+'head'+'><'+'link rel="stylesheet" ');
-					win.document.write('href="http:'+'/'+'/'+'randyhembrador.com'+'/'+'wp-content'+'/'+'themes'+'/'+'hembradorlab'+'/'+'style.css"');
+					win.document.write('href="http:'+'/'+'/'+document.location.hostname+'/'+'wp-content'+'/'+'themes'+'/'+'hembradorlab'+'/'+'resStyle.css"');
 					win.document.write('><'+'/'+'head'+'><'+'body'+'>');
 					win.document.write(content.html());
 					win.document.write('<'+'/'+'body'+'><'+'/'+'html'+'>');
@@ -67,7 +67,7 @@ $j(function fancyFeast() {
 					win.close();
 				});
 			},
-		'afterShow'			: function(){
+			'afterShow'		: function(){
 									$j('.fancybox-inner').jScrollPane();
 									$j('.jspVerticalBar').css({
 										'top'	: 104,
